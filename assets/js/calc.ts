@@ -19,7 +19,7 @@ enum System {
     CloudRing = "O-ZXUV (Cloud Ring)",
 };
 
-const DEFAULT_ROUTE_SELECTION = "1DQ1-A ⮂ Jita/Perimeter";
+const DEFAULT_ROUTE_SELECTION = "C4C-Z4 ⮂ N2IS-B";
 const ROUTE_SEP_ARROW = " ➠ ";
 const ROUTE_SEP_ARROW_RT = " ⮂ "
 const CLICK_TO_COPY = " Click to Copy";
