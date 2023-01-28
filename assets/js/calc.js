@@ -55,7 +55,7 @@ var System;
     System["CloudRing"] = "O-ZXUV (Cloud Ring)";
 })(System || (System = {}));
 ;
-var DEFAULT_ROUTE_SELECTION = "1DQ1-A ⮂ Jita/Perimeter";
+var DEFAULT_ROUTE_SELECTION = "C4C-Z4 ⮂ N2IS-B";
 var ROUTE_SEP_ARROW = " ➠ ";
 var ROUTE_SEP_ARROW_RT = " ⮂ ";
 var CLICK_TO_COPY = " Click to Copy";
