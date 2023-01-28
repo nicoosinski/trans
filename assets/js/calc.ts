@@ -1,5 +1,7 @@
 
 enum System {
+    Staging = "C4C-Z4",
+    Home = "N2IS-B",
     ImperialPalace = "1DQ1-A",  // Can't use 1DQ as key here because it starts with a number
     Delve = "Intra Delve",
     Forge = "Jita/Perimeter",
@@ -85,7 +87,17 @@ class RouteCalc implements Destination {
 }
 
 const routes = [
-    {
+        {
+        origin: System.Staging,
+        destinations: [
+            {
+                destination: System.Home,
+                rate: 250,
+                isRoundTrip: true,
+            },
+        ]
+        },
+/*     {
         origin: System.ImperialPalace,
         destinations: [
             {
@@ -234,7 +246,7 @@ const routes = [
                 rate: STANDARD_EXPORT_TO_JITA_RATE,
             },
         ]
-    },
+    }, */
 ] as Route[]
 
 /**
