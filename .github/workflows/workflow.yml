@@ -1,4 +1,4 @@
-name: Build and deploy NOFU jekyll site
+name: Build and deploy suspect jekyll site
 
 on:
   push:
