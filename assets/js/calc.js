@@ -36,6 +36,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var System;
 (function (System) {
+    System["Staging"] = "C4C-Z4";
+    System["Home"] = "N2IS-B";
     System["ImperialPalace"] = "1DQ1-A";
     System["Delve"] = "Intra Delve";
     System["Forge"] = "Jita/Perimeter";
@@ -96,155 +98,165 @@ var RouteCalc = /** @class */ (function () {
 }());
 var routes = [
     {
-        origin: System.ImperialPalace,
+        origin: System.Staging,
         destinations: [
             {
-                destination: System.Forge,
-                rate: STANDARD_EXPORT_TO_JITA_RATE,
-                minReward: JITA_REDUCED_MIN_REWARD,
-                isRoundTrip: STANDARD_EXPORT_TO_JITA_RATE == STANDARD_IMPORT_FROM_JITA_RATE,
-            },
-            {
-                destination: System.DP,
-                rate: 750,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.CloudRing,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE + FOUR_JUMP_RT,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Ahbazon,
-                rate: FOUR_JUMP_RT,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Domain,
-                rate: STANDARD_DOMAIN_RATE,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Initiative,
-                rate: FOUNTAIN_DELVE_RATE,
-            },
-            {
-                destination: System.PeriodBasis,
-                rate: FOUR_JUMP_RT,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Zinkon,
-                rate: STANDARD_DOMAIN_RATE,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Delve,
-                rate: 300,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Serren,
-                rate: STANDARD_EXPORT_TO_JITA_RATE,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Querious,
-                rate: 300,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Amok,
+                destination: System.Home,
                 rate: 250,
                 isRoundTrip: true,
             },
         ]
     },
-    {
-        origin: System.Initiative,
-        destinations: [
-            {
-                destination: System.Forge,
-                rate: STANDARD_EXPORT_TO_JITA_RATE,
-            },
-            {
-                destination: System.ImperialPalace,
-                rate: FOUNTAIN_DELVE_RATE,
-            },
-        ]
-    },
-    {
-        origin: System.Forge,
-        destinations: [
-            {
-                destination: System.CloudRing,
-                rate: STANDARD_DOMAIN_RATE,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.NorthernSIGDeployment,
-                rate: 400,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.ImperialPalace,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE,
-                minReward: JITA_REDUCED_MIN_REWARD,
-                isRoundTrip: STANDARD_EXPORT_TO_JITA_RATE == STANDARD_IMPORT_FROM_JITA_RATE,
-            },
-            {
-                destination: System.Initiative,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE,
-            },
-            {
-                destination: System.Querious,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE + 100,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Serren,
-                rate: FOUR_JUMP_RT,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.Amok,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE + 50,
-                minReward: JITA_REDUCED_MIN_REWARD,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.PeriodBasis,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE + 350,
-                isRoundTrip: true,
-            },
-            {
-                destination: System.DP,
-                rate: STANDARD_IMPORT_FROM_JITA_RATE + 750,
-            },
-        ],
-    },
-    {
-        origin: System.Irmalin,
-        destinations: [
-            {
-                destination: System.Forge,
-                rate: STANDARD_EXPORT_TO_JITA_RATE,
-            },
-            {
-                destination: System.ImperialPalace,
-                rate: 500,
-            }
-        ]
-    },
-    {
-        origin: System.Zinkon,
-        destinations: [
-            {
-                destination: System.Forge,
-                rate: STANDARD_EXPORT_TO_JITA_RATE,
-            },
-        ]
-    },
+    /*     {
+            origin: System.ImperialPalace,
+            destinations: [
+                {
+                    destination: System.Forge,
+                    rate: STANDARD_EXPORT_TO_JITA_RATE,
+                    minReward: JITA_REDUCED_MIN_REWARD,  // 10m
+                    isRoundTrip: STANDARD_EXPORT_TO_JITA_RATE == STANDARD_IMPORT_FROM_JITA_RATE,
+                },
+                {
+                    destination: System.DP,
+                    rate:  750,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.CloudRing,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE + FOUR_JUMP_RT,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Ahbazon,
+                    rate: FOUR_JUMP_RT,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Domain,
+                    rate: STANDARD_DOMAIN_RATE,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Initiative,
+                    rate: FOUNTAIN_DELVE_RATE,
+                },
+                {
+                    destination: System.PeriodBasis,
+                    rate: FOUR_JUMP_RT,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Zinkon,
+                    rate: STANDARD_DOMAIN_RATE,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Delve,
+                    rate: 300,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Serren,
+                    rate: STANDARD_EXPORT_TO_JITA_RATE,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Querious,
+                    rate: 300,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Amok,
+                    rate: 250,
+                    isRoundTrip: true,
+                },
+            ]
+        },
+        {
+            origin: System.Initiative,
+            destinations: [
+                {
+                    destination: System.Forge,
+                    rate: STANDARD_EXPORT_TO_JITA_RATE,
+                },
+                {
+                    destination: System.ImperialPalace,
+                    rate: FOUNTAIN_DELVE_RATE,
+                },
+            ]
+        },
+        {
+            origin: System.Forge,
+            destinations: [
+                {
+                    destination: System.CloudRing,
+                    rate: STANDARD_DOMAIN_RATE,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.NorthernSIGDeployment,
+                    rate: 400,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.ImperialPalace,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE,
+                    minReward: JITA_REDUCED_MIN_REWARD,
+                    isRoundTrip: STANDARD_EXPORT_TO_JITA_RATE == STANDARD_IMPORT_FROM_JITA_RATE,
+                },
+                {
+                    destination: System.Initiative,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE,
+                },
+                {
+                    destination: System.Querious,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE + 100,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Serren,
+                    rate: FOUR_JUMP_RT,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.Amok,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE + 50,
+                    minReward: JITA_REDUCED_MIN_REWARD,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.PeriodBasis,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE + 350,
+                    isRoundTrip: true,
+                },
+                {
+                    destination: System.DP,
+                    rate: STANDARD_IMPORT_FROM_JITA_RATE + 750,
+                },
+            ],
+        },
+        {
+            origin: System.Irmalin,
+            destinations: [
+                {
+                    destination: System.Forge,
+                    rate: STANDARD_EXPORT_TO_JITA_RATE,
+                },
+                {
+                    destination: System.ImperialPalace,
+                    rate: 500,
+                }
+            ]
+        },
+        {
+            origin: System.Zinkon,
+            destinations: [
+                {
+                    destination: System.Forge,
+                    rate: STANDARD_EXPORT_TO_JITA_RATE,
+                },
+            ]
+        }, */
 ];
 /**
  * Adds options to the select element representing routes serviced
